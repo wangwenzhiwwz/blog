@@ -1257,7 +1257,25 @@
                         </ul>
                     </div>
                 </div>
+                     <!-- 留言区 -->   
+			<div id="container">
+			</div>
+			<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+			<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+			<script>
+				var gitment = new Gitment({
+					id: 'location.href', // 可选。默认为 location.href
+					owner: 'wangwenzhiwwz',
+					repo: 'http://wangwenzhi.top/',
+					oauth: {
+						client_id: 'b02b879b15f99ee0172c',
+						client_secret: 'add42fd09c16fc363d6ddc5d1c4419a0513412a3',
+					},
+				})
+				gitment.render('container')
+			</script>
             </div>
+            
         </div>
         <footer class="style-1">
             <div class="container">
@@ -1287,6 +1305,7 @@
                         </div>
                     </div>
                 </div>
+            
             </div>
         </footer>
     </section>
@@ -1299,7 +1318,6 @@
         </div>
     </div>
 
-    
 
     <!-- jQuery Version 2.1.1 -->
     <script src="js/jquery-2.1.1.min.js"></script>

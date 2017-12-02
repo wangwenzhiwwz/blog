@@ -1260,25 +1260,27 @@
                     </div>
                 </div>
                      <!-- 留言区 -->   
-			<div id="container">
-			</div>
-			<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-			<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-			<script>
-				var gitment = new Gitment({
-					
-					owner: 'wangwenzhiwwz',
-					repo: 'wangwenzhiwwz.github.io',
-					oauth: {
-						client_id: 'b02b879b15f99ee0172c',
-						client_secret: 'add42fd09c16fc363d6ddc5d1c4419a0513412a3',
-					},
-				})
-				
+			<div id="disqus_thread"></div>
+		<script>
 
-	
-				gitment.render('container')
-			</script>
+		/**
+		*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+		*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+		/*
+		var disqus_config = function () {
+		this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		};
+		*/
+		(function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://wangwenzhi-top.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+		})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
             </div>
             
         </div>
@@ -1343,6 +1345,10 @@
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
+<!--计算-->
+<script id="dsq-count-scr" src="//wangwenzhi-top.disqus.com/count.js" async></script>
+
+
 
     <!-- Custom Theme JavaScript -->
     <script src="js/script.js"></script>

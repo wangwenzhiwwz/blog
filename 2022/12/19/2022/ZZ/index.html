@@ -163,13 +163,13 @@
 <!--only post-->
 
 
-<img class="wechat-title-img" src="https://raw.githubusercontent.com/wangwenzhiwwz/images/main/img20221219232746.png">
+<img class="wechat-title-img" src="https://wangwenzhi.eu.org/images/images/iptables.png">
 
 
 <style>
     
     header.intro-header {
-        background-image: url('https://raw.githubusercontent.com/wangwenzhiwwz/images/main/img20221219232746.png');
+        background-image: url('https://wangwenzhi.eu.org/images/images/iptables.png');
     }
 
     
@@ -213,7 +213,8 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h1 id="利用iptables设置端口转发的shell脚本"><a href="#利用iptables设置端口转发的shell脚本" class="headerlink" title="利用iptables设置端口转发的shell脚本"></a>利用iptables设置端口转发的shell脚本</h1><p>项目作用<br>便捷地设置iptables流量转发规则<br>当域名解析的地址发生变化时，自动更新流量转发规则，不需要手动变更（适用于ddns域名）<br>用法<br>如果vps不能访问 raw.githubusercontent.com 推荐使用这个<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget --no-check-certificate -qO natcfg.sh https://www.arloor.com/sh/iptablesUtils/natcfg.sh &amp;&amp; bash natcfg.sh</span><br><span class="line">或</span><br><span class="line"></span><br><span class="line">wget --no-check-certificate -qO natcfg.sh https://raw.githubusercontent.com/arloor/iptablesUtils/master/natcfg.sh &amp;&amp; bash natcfg.sh</span><br></pre></td></tr></table></figure></p>
+                <p><img src="https://wangwenzhi.eu.org/images/images/iptables.png" alt=""></p>
+<h1 id="利用iptables设置端口转发的shell脚本"><a href="#利用iptables设置端口转发的shell脚本" class="headerlink" title="利用iptables设置端口转发的shell脚本"></a>利用iptables设置端口转发的shell脚本</h1><p>项目作用<br>便捷地设置iptables流量转发规则<br>当域名解析的地址发生变化时，自动更新流量转发规则，不需要手动变更（适用于ddns域名）<br>用法<br>如果vps不能访问 raw.githubusercontent.com 推荐使用这个<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget --no-check-certificate -qO natcfg.sh https://www.arloor.com/sh/iptablesUtils/natcfg.sh &amp;&amp; bash natcfg.sh</span><br><span class="line">或</span><br><span class="line"></span><br><span class="line">wget --no-check-certificate -qO natcfg.sh https://raw.githubusercontent.com/arloor/iptablesUtils/master/natcfg.sh &amp;&amp; bash natcfg.sh</span><br></pre></td></tr></table></figure></p>
 <p>输出如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#############################################################</span><br><span class="line"># Usage: setup iptables nat rules for domian/ip             #</span><br><span class="line"># Website:  http://www.arloor.com/                          #</span><br><span class="line"># Author: ARLOOR &lt;admin@arloor.com&gt;                         #</span><br><span class="line"># Github: https://github.com/arloor/iptablesUtils           #</span><br><span class="line">#############################################################</span><br><span class="line"></span><br><span class="line">你要做什么呢（请输入数字）？Ctrl+C 退出本脚本</span><br><span class="line">1) 增加转发规则          3) 列出所有转发规则</span><br><span class="line">2) 删除转发规则          4) 查看当前iptables配置</span><br><span class="line">#?</span><br></pre></td></tr></table></figure></p>
 <p>此时按照需要，输入1-4中的任意数字，然后按照提示即可</p>
 <p>卸载<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget --no-check-certificate -qO uninstall.sh https://raw.githubusercontent.com/arloor/iptablesUtils/master/dnat-uninstall.sh &amp;&amp; bash uninstall.sh</span><br></pre></td></tr></table></figure></p>

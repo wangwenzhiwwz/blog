@@ -26,7 +26,7 @@
     
     <title>
         
-        OpenWrt｜WANGWENZHI
+        ZeroTier｜WANGWENZHI
         
     </title>
 
@@ -41,7 +41,7 @@
     </script>
     
 
-    <link rel="canonical" href="https://wangwenzhi.eu.org/blog/blog/2022/12/04/2022/WKY/">
+    <link rel="canonical" href="https://wangwenzhi.eu.org/blog/blog/2023/04/22/2023/ZeroTier/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
@@ -151,13 +151,13 @@
 <!--only post-->
 
 
-<img class="wechat-title-img" src="https://wangwenzhi.eu.org/images/images/wky.png">
+<img class="wechat-title-img" src="https://wangwenzhi.eu.org/images/images/ZeroTier.png">
 
 
 <style>
     
     header.intro-header {
-        background-image: url('https://wangwenzhi.eu.org/images/images/wky.png');
+        background-image: url('https://wangwenzhi.eu.org/images/images/ZeroTier.png');
     }
 
     
@@ -168,14 +168,14 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>OpenWrt</h1>
+                    <h1>ZeroTier</h1>
                     
-                    <h2 class="subheading">玩客云刷机openwrt教程</h2>
+                    <h2 class="subheading">VPS[CentOS]中安装 ZeroTier </h2>
                     
                     <span class="meta">
                          作者 王文志
                         <span>
-                          日期 2022-12-04
+                          日期 2023-04-22
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -190,7 +190,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            OpenWrt
+            ZeroTier
         </span>
     </div>
 </header>
@@ -201,138 +201,67 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <p><img src="https://wangwenzhi.eu.org/images/images/wky.png" alt=""></p>
-<h1 id="玩客云刷机armbian变身openwrt旁路由教程＆性能测试"><a href="#玩客云刷机armbian变身openwrt旁路由教程＆性能测试" class="headerlink" title="玩客云刷机armbian变身openwrt旁路由教程＆性能测试"></a>玩客云刷机armbian变身openwrt旁路由教程＆性能测试</h1><p><img src="https://img.senxi.xyz/imgs/2022/12/32913c1cea2dd078.png" alt=""></p>
-<p>玩客云是17年的一款矿渣产品，我当时入手价499可以挖矿换话费和备份手机照片、使用迅雷高速下载，阿里云盘出来后不限速，也没有下载需求了，吃灰良久。</p>
-<p>最近折腾了玩客云刷机OpenWrt作为旁路由的方案，分享给大家，有需要的朋友折腾。</p>
-<p><strong>「玩客云硬件参数：」</strong></p>
-<ul>
-<li><p>CPU是晶晨S805 ，4核心 1.5GHZ</p>
-</li>
-<li><p>双USB2.0</p>
-</li>
-<li><p>千兆单网口</p>
-</li>
-<li><p>1GB内存+8GB存储</p>
-</li>
-</ul>
-<p>这个配置平平无奇，主要的硬伤是cpu32位的，usb2.0传输速度只有20M/秒左右，下载速度跑不满千兆带宽，好的地方是千兆网口。</p>
-<p><strong>「刷机准备工具：」</strong></p>
+                <p><img src="https://wangwenzhi.eu.org/images/images/ZeroTier.png" alt=""></p>
 <ol>
-<li><p>WIN10电脑一台</p>
-</li>
-<li><p>双公头USB线一根</p>
-</li>
-<li><p>矿渣玩客云</p>
-</li>
-<li><p>螺丝刀、吹风机</p>
+<li><p>使用以下命令下载 ZeroTier 安装脚本：</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">curl -s https://install.zerotier.com | bash</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h3 id="玩客云刷机openwrt两种方法："><a href="#玩客云刷机openwrt两种方法：" class="headerlink" title="玩客云刷机openwrt两种方法："></a>玩客云刷机openwrt两种方法：</h3><p><strong>「方法一」</strong>直刷openwrt 这个网上资源只有一个，snail 大神制作的固件，固件没插件，需要自己安装。</p>
-<p><strong>「方法二」</strong>刷armbian安装docker在安装openwrt，这个有比较多的适合固件，openwrt版本新，插件多，本次选这个方案。</p>
-<h3 id="刷机资源分享"><a href="#刷机资源分享" class="headerlink" title="刷机资源分享"></a>刷机资源分享</h3><p>刷机固件、软件，使用阿里云分享，不限速，需要转存后下载，然后解压！</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d71c4ba104.png" alt=""></p>
-<h4 id="玩客云openwrt刷机包："><a href="#玩客云openwrt刷机包：" class="headerlink" title="玩客云openwrt刷机包："></a>玩客云openwrt刷机包：</h4><blockquote>
-<p>❝</p>
-<p><a href="https://www.aliyundrive.com/s/ZM3oScBDcck**「提取码" target="_blank" rel="noopener">https://www.aliyundrive.com/s/ZM3oScBDcck**「提取码</a>: y75j」**</p>
-<p>❞</p>
-</blockquote>
-<h3 id="第一步：刷入底包-update"><a href="#第一步：刷入底包-update" class="headerlink" title="第一步：刷入底包 update"></a>第一步：刷入底包 update</h3><p><img src="http://img.senxi.xyz/i/2022/10/05/633d385dacd7a.png" alt=""></p>
-<p>WIN10打开烧录软件，选择update镜像，点开始。</p>
-<p>关键步骤，先短接触点，再接通玩客云主板电源。需要说明的是，玩客云有两种版本，它们的短接位置也是不一样的。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633cf77c3e418.png" alt=""></p>
-<p>我的是老主板，上图短接位置，图片来源：@Powersee大神</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633cf81ec5862.png" alt=""></p>
-<p>这个是新版（也就是玩客云主板上标注的有v1.3的主板），短接点是在正面。</p>
-<p>拆机后、usb插入玩客云<strong>「靠近HDMI的接口」</strong>、另一头接入电脑usb、短接焊点、通电。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d3af398e4d.png" alt=""></p>
-<p>正常情况，会出现上图的一个线程，开始写入。如果有错误，换一个usb接口，多试几次。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d3b8b4702d.png" alt=""></p>
-<p>这个固件很小，很快就会写完，一般几秒钟，提示烧录成功后，先点”停止“，然后关闭，拔掉电源、拔掉USB。</p>
-<h3 id="第二步：玩客云刷入armbian5-9系统"><a href="#第二步：玩客云刷入armbian5-9系统" class="headerlink" title="第二步：玩客云刷入armbian5.9系统"></a>第二步：玩客云刷入armbian5.9系统</h3><p>这一步分为好几个部分：</p>
 <ol>
-<li><p>U盘写入armbian5.88系统</p>
-</li>
-<li><p>armbian5.88写入玩客云EMMC</p>
-</li>
-<li><p>U盘写入armbian5.9系统</p>
-</li>
-<li><p>U盘启armbian5.9系统ssh登陆写入EMMC</p>
+<li><p>安装完成后，使用以下命令启动 ZeroTier 服务：</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl start zerotier-one</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d3cfdb2c9d.png" alt=""></p>
-<p>打开写入U盘镜像软件，选择镜像，确认U盘名称，点flash开始写入。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d3d65990e0.png" alt=""></p>
-<p>等待几分钟，写入速度和U盘传输速度有关，一般是几分钟，提示成功后，关闭软件，拔出U盘。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d3ece9181a.png" alt=""></p>
-<p>把U盘插入玩客云靠近网口的USB，然后通电，指示灯会蓝色→绿色→蓝紫闪烁→蓝色，证明刷机成功，过程好几分钟，多等下。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d40ded1121.png" alt=""></p>
-<p>打开写入软件，选armbian5.9的镜像，写入U盘，过程比前面快一点，这个镜像小一些，同样步骤操作。</p>
-<p>armbian5.9系统写入完成后，把U盘插入玩客云靠近网口的USB，用网线接入路由器LAN口，通电开机。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d5af6e7eea.png" alt=""></p>
-<p>过一会打开路由器后台，找到”aml-s812“的设备IP地址，复制。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d5be67081d.png" alt=""></p>
-<p>WIN10电脑打开putty软件，其他ssh工具也可以，填入上面的IP地址</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d5d5a18ac3.png" alt=""></p>
-<p>登陆，用户名：root  默认密码：1234</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d5e6b9bb66.png" alt=""></p>
-<p>进入目录 <code>cd /boot/install</code> ，写入emmc命令，等待写入完成，耗时几分钟。</p>
-<p>刷入 emmc命令：</p>
-<p>cd /boot/install  sudo ./install.sh</p>
-<p>完成后，拔电源，拔掉U盘，终于ARMBIAN系统刷机完成。</p>
-<h3 id="第三步：docker环境搭建"><a href="#第三步：docker环境搭建" class="headerlink" title="第三步：docker环境搭建"></a>第三步：docker环境搭建</h3><p>国内网络连接不稳定，需要更换软件源，然后更新系统，之后才能安装docker。</p>
-<p><strong>「换Debian源」</strong></p>
-<p><code>mv /etc/apt/sources.list /etc/apt/sources.list.bk   nano /etc/apt/sources.list</code></p>
-<p>进入编辑器后，粘贴下面代码</p>
-<p><code>deb https://mirrors.ustc.edu.cn/debian/ bullseye main non-free contrib   deb-src https://mirrors.ustc.edu.cn/debian/ bullseye main non-free contrib   deb https://mirrors.ustc.edu.cn/debian-security/ bullseye-security main   deb-src https://mirrors.ustc.edu.cn/debian-security/ bullseye-security main   deb https://mirrors.ustc.edu.cn/debian/ bullseye-updates main non-free contrib   deb-src https://mirrors.ustc.edu.cn/debian/ bullseye-updates main non-free contrib   deb https://mirrors.ustc.edu.cn/debian/ bullseye-backports main non-free contrib   deb-src https://mirrors.ustc.edu.cn/debian/ bullseye-backports main non-free contrib</code></p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d62359f905.png" alt=""></p>
-<p>然后保存，退出。</p>
-<p><strong>「更新软件」</strong></p>
-<p><code>apt-get update &amp;&amp; apt-get upgrade</code></p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d649e79d7c.png" alt=""></p>
-<p>选择有Y就选Y，有默认的情况就选N</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d652203b88.png" alt=""></p>
-<p>这里选择 NO</p>
-<p><strong>「安装docker」</strong></p>
-<p><code>apt install docker.io</code></p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d662e1aeb5.png" alt=""></p>
-<p>等待代码跑完后，docker -v 查看下版本，证明安装成功！</p>
-<h3 id="安装OpenWrt"><a href="#安装OpenWrt" class="headerlink" title="安装OpenWrt"></a>安装OpenWrt</h3><p>镜像一：<a href="https://www.right.com.cn/forum/thread-8024126-1-1.html" target="_blank" rel="noopener">https://www.right.com.cn/forum/thread-8024126-1-1.html</a></p>
-<p>镜像二：<a href="https://hub.docker.com/r/xuanaimai/onecloud" target="_blank" rel="noopener">https://hub.docker.com/r/xuanaimai/onecloud</a></p>
-<p>本次安装的是镜像一，比较精简，功能够用；镜像二功能很全，根据自己需要选择。</p>
-<p><strong>「打开网卡混杂模式」</strong></p>
-<p>ip link set eth0 promisc on</p>
-<p><strong>「创建网络」</strong></p>
-<p>docker network create -d macvlan –subnet=192.168.100.0/24 –gateway=192.168.100.1 -o parent=eth0 macnet</p>
-<p>自己根据 玩客云 所在网段修改，如：玩客云IP:192.168.1.175，则192.168.0.0/24 改成 192.168.1.0/24，192.168.0.1改成主路由地址</p>
-<p><strong>「拉取镜像」</strong></p>
-<p>docker pull jyhking/onecloud:1.1docker run -itd –name=OneCloud –restart=always –network=macnet –privileged=true jyhking/onecloud:1.1 /sbin/init</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d698e6cd3c.png" alt=""></p>
-<p>openwrt镜像运行成功，然后打开路由器后台，找到openwrt地址。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d6aececc72.png" alt=""></p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d6b91b4951.png" alt=""></p>
-<p><strong>「用户名：root  密码： password」</strong></p>
-<p><strong>「玩客云旁路由设置：」</strong></p>
-<ul>
-<li><p>LAN口固定IP地址，网关指向主路由IP地址</p>
+<ol>
+<li><p>可以使用以下命令检查 ZeroTier 服务是否已经启动：</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl status zerotier-one</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>关闭DHCP服务器</p>
+</ol>
+<pre><code>如果服务已经启动，则可以看到类似以下的输出：
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">● zerotier-one.service - ZeroTier One</span><br><span class="line">     Loaded: loaded (/usr/lib/systemd/system/zerotier-one.service; enabled; vendor preset: disabled)</span><br><span class="line">     Active: active (running) since Tue 2021-09-28 11:02:14 EDT; 2s ago</span><br><span class="line">   Main PID: 16398 (zerotier-one)</span><br><span class="line">      Tasks: 14 (limit: 4887)</span><br><span class="line">     Memory: 9.7M</span><br><span class="line">        CPU: 148ms</span><br><span class="line">     CGroup: /system.slice/zerotier-one.service</span><br><span class="line">             └─16398 /sbin/zerotier-one</span><br></pre></td></tr></table></figure>
+</code></pre><ol>
+<li><p>如果需要在系统启动时自动启动 ZeroTier 服务，可以使用以下命令将其设置为开机自启：</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl enable zerotier-one</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>关闭IPV6</p>
+</ol>
+<ol>
+<li><p>配置完成后，可以在 ZeroTier 官网注册账号并创建网络。在创建网络时，会分配一个网络 ID，将该 ID 添加到 ZeroTier 客户端即可加入该网络。例如：</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">zerotier-cli join 1c33c1ced02dd878</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>防火墙自定义规则添加下面代码<code>iptables -t nat -I POSTROUTING eth0 -j MASQUERADE</code></p>
+</ol>
+<pre><code>其中，**`NETWORK_ID`** 是从 ZeroTier 网络控制台获取的网络 ID。
+</code></pre><p>希望这些步骤可以帮助你在 CentOS 上安装并使用 ZeroTier。</p>
+<h1 id="ZeroTier-Global-Area-Networking"><a href="#ZeroTier-Global-Area-Networking" class="headerlink" title="ZeroTier | Global Area Networking"></a><a href="https://www.zerotier.com/" target="_blank" rel="noopener">ZeroTier | Global Area Networking</a></h1><h1 id="配置一个代理服务"><a href="#配置一个代理服务" class="headerlink" title="配置一个代理服务"></a>配置一个代理服务</h1><h2 id="服务端配置"><a href="#服务端配置" class="headerlink" title="服务端配置"></a>服务端配置</h2><p>配置一个代理服务通常包括以下几个步骤：</p>
+<ol>
+<li>选择代理服务软件。根据需要选择一个适合的代理服务软件。常见的代理服务软件有 Squid、Nginx、Shadowsocks 等。这里以 Squid 为例。</li>
+<li><p>安装代理服务软件。在 Linux 系统中，可以使用包管理工具安装 Squid。例如，在 Ubuntu 系统中，可以使用以下命令安装 Squid：</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<h3 id="玩客云旁路由性能测试"><a href="#玩客云旁路由性能测试" class="headerlink" title="玩客云旁路由性能测试"></a>玩客云旁路由性能测试</h3><p><strong>「1、iperf3内网测速」</strong></p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d6cb467610.png" alt=""></p>
-<p>基本上在930Mbps上下，证明网口是千兆的，基本跑满了。</p>
-<p><strong>「2、油管4K视频跑分测试」</strong></p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d6d8e99755.png" alt=""></p>
-<p>稳定在5万多分，功耗1瓦多，CPU占用率在 40% 左右。</p>
-<p><strong>「3、fast网速测试」</strong></p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d6e1ce2667.png" alt=""></p>
-<p>测了好几次，最低65Mbps，最高84Mbps，看4K视频完全够用了。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>价格低廉，40多块钱就能入手，千兆网口，可当旁路由使用，能满足100M带宽的科学上网，功耗极低，适合喜欢折腾的朋友。</p>
+</ol>
+<pre><code><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install squid</span><br></pre></td></tr></table></figure>
+
+
+在 Windows 系统中，可以从 Squid 官网下载 Squid for Windows，然后进行安装。
+</code></pre><ol>
+<li><p>修改 Squid 配置文件。在 Linux 系统中，Squid 配置文件通常位于 <strong><code>/etc/squid/squid.conf</code></strong>，可以使用文本编辑器打开该文件。在 Windows 系统中，Squid 配置文件通常位于 <strong><code>squid.conf</code></strong>，可以使用文本编辑器打开该文件。</p>
+<p> 需要修改的配置项主要包括监听端口、允许访问的网络等。例如，以下是一个简单的配置文件示例：</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http_port 3128</span><br><span class="line">acl localnet src 192.168.0.0/16</span><br><span class="line">http_access allow localnet</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>在该配置文件中，**`http_port`** 指定了 Squid 监听的端口号，**`acl localnet`** 指定了允许访问的网络，**`http_access allow localnet`** 指定了允许该网络的流量访问 Squid。
+</code></pre><ol>
+<li><p>启动代理服务。在 Linux 系统中，可以使用以下命令启动 Squid：</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo systemctl start squid</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>在 Windows 系统中，可以在服务管理器中启动 Squid。
+</code></pre><ol>
+<li><p>配置代理客户端。在需要使用代理服务的设备上，配置代理客户端将流量转发到代理服务器。具体配置方法可以参考代理客户端的官方文档或者相关教程。</p>
+<p> 以浏览器为例，可以在浏览器的设置中设置代理服务器地址和端口，将流量通过代理服务器进行访问。</p>
+</li>
+</ol>
+<p>希望这些步骤可以帮助你简单配置一个代理服务。</p>
 
                 <hr>
                 
@@ -340,14 +269,14 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/blog/2022/12/19/2022/ZZ/" data-toggle="tooltip" data-placement="top"
-                           title="IPtables">&larr; Previous Post</a>
+                        <a href="/blog/2023/04/30/2023/outline/" data-toggle="tooltip" data-placement="top"
+                           title="Outline">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/blog/2022/07/23/2022/10video/" data-toggle="tooltip" data-placement="top"
-                           title="追剧网站">Next Post &rarr;</a>
+                        <a href="/blog/2023/04/21/2023/live/" data-toggle="tooltip" data-placement="top"
+                           title="Live">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -385,7 +314,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#玩客云刷机armbian变身openwrt旁路由教程＆性能测试"><span class="toc-text">玩客云刷机armbian变身openwrt旁路由教程＆性能测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#玩客云刷机openwrt两种方法："><span class="toc-text">玩客云刷机openwrt两种方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#刷机资源分享"><span class="toc-text">刷机资源分享</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#玩客云openwrt刷机包："><span class="toc-text">玩客云openwrt刷机包：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步：刷入底包-update"><span class="toc-text">第一步：刷入底包 update</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二步：玩客云刷入armbian5-9系统"><span class="toc-text">第二步：玩客云刷入armbian5.9系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三步：docker环境搭建"><span class="toc-text">第三步：docker环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装OpenWrt"><span class="toc-text">安装OpenWrt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#玩客云旁路由性能测试"><span class="toc-text">玩客云旁路由性能测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ZeroTier-Global-Area-Networking"><span class="toc-text">ZeroTier | Global Area Networking</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置一个代理服务"><span class="toc-text">配置一个代理服务</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#服务端配置"><span class="toc-text">服务端配置</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>

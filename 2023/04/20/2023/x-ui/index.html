@@ -26,7 +26,7 @@
     
     <title>
         
-        OpenWrt｜WANGWENZHI
+        x-ui｜WANGWENZHI
         
     </title>
 
@@ -41,7 +41,7 @@
     </script>
     
 
-    <link rel="canonical" href="https://wangwenzhi.eu.org/blog/blog/2022/12/04/2022/WKY/">
+    <link rel="canonical" href="https://wangwenzhi.eu.org/blog/blog/2023/04/20/2023/x-ui/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
@@ -151,13 +151,13 @@
 <!--only post-->
 
 
-<img class="wechat-title-img" src="https://wangwenzhi.eu.org/images/images/wky.png">
+<img class="wechat-title-img" src="https://wangwenzhi.eu.org/images/images/xui.png">
 
 
 <style>
     
     header.intro-header {
-        background-image: url('https://wangwenzhi.eu.org/images/images/wky.png');
+        background-image: url('https://wangwenzhi.eu.org/images/images/xui.png');
     }
 
     
@@ -168,14 +168,14 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>OpenWrt</h1>
+                    <h1>x-ui</h1>
                     
-                    <h2 class="subheading">玩客云刷机openwrt教程</h2>
+                    <h2 class="subheading">x-ui面板实现单端口多用户合租</h2>
                     
                     <span class="meta">
                          作者 王文志
                         <span>
-                          日期 2022-12-04
+                          日期 2023-04-20
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -190,7 +190,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            OpenWrt
+            x-ui
         </span>
     </div>
 </header>
@@ -201,138 +201,28 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <p><img src="https://wangwenzhi.eu.org/images/images/wky.png" alt=""></p>
-<h1 id="玩客云刷机armbian变身openwrt旁路由教程＆性能测试"><a href="#玩客云刷机armbian变身openwrt旁路由教程＆性能测试" class="headerlink" title="玩客云刷机armbian变身openwrt旁路由教程＆性能测试"></a>玩客云刷机armbian变身openwrt旁路由教程＆性能测试</h1><p><img src="https://img.senxi.xyz/imgs/2022/12/32913c1cea2dd078.png" alt=""></p>
-<p>玩客云是17年的一款矿渣产品，我当时入手价499可以挖矿换话费和备份手机照片、使用迅雷高速下载，阿里云盘出来后不限速，也没有下载需求了，吃灰良久。</p>
-<p>最近折腾了玩客云刷机OpenWrt作为旁路由的方案，分享给大家，有需要的朋友折腾。</p>
-<p><strong>「玩客云硬件参数：」</strong></p>
-<ul>
-<li><p>CPU是晶晨S805 ，4核心 1.5GHZ</p>
-</li>
-<li><p>双USB2.0</p>
-</li>
-<li><p>千兆单网口</p>
-</li>
-<li><p>1GB内存+8GB存储</p>
-</li>
+                <h1 id="X-UI一键脚本"><a href="#X-UI一键脚本" class="headerlink" title="X-UI一键脚本"></a>X-UI一键脚本</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)</span><br></pre></td></tr></table></figure>
+<p>安装完成后默认是IP:54321访问面板。默认密码是admin；admin，默认密码不安全，请到面板后台更改用户名和密码。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/root/CF.pem</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/root/CF.key</span><br></pre></td></tr></table></figure>
+<p><img src="https://wangwenzhi.eu.org/images/images/xui.png" alt="https://wangwenzhi.eu.org/images/images/xui.png"></p>
+<h1 id="TLS安装前准备步骤"><a href="#TLS安装前准备步骤" class="headerlink" title="TLS安装前准备步骤"></a>TLS安装前准备步骤</h1><h1 id="socat"><a href="#socat" class="headerlink" title="socat"></a>socat</h1><p>其实不需要SOCAT也可以，不过安装X-UI以后我们使用v2或者trojan的ssl加密的时候需要ssl证书，这个时候我们需要Acme配合NGINX/SOCAT申请证书。</p>
+<p>当你的服务器上有nginx或者宝塔面板时，就不需要安装socat了，在这个时候执行是申请SSL脚本会提示80端口被占用出错。</p>
+<h1 id="1-Debian-Ubuntu安装socat"><a href="#1-Debian-Ubuntu安装socat" class="headerlink" title="1. Debian/Ubuntu安装socat"></a>1. Debian/Ubuntu安装socat</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt update -y</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt install -y curl</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt install -y socat</span><br></pre></td></tr></table></figure>
+<h1 id="2-centos安装socat"><a href="#2-centos安装socat" class="headerlink" title="2. centos安装socat"></a>2. centos安装socat</h1><ul>
+<li>yum update -y</li>
+<li>yum install -y curl</li>
+<li>yum install -y socat</li>
 </ul>
-<p>这个配置平平无奇，主要的硬伤是cpu32位的，usb2.0传输速度只有20M/秒左右，下载速度跑不满千兆带宽，好的地方是千兆网口。</p>
-<p><strong>「刷机准备工具：」</strong></p>
-<ol>
-<li><p>WIN10电脑一台</p>
-</li>
-<li><p>双公头USB线一根</p>
-</li>
-<li><p>矿渣玩客云</p>
-</li>
-<li><p>螺丝刀、吹风机</p>
-</li>
-</ol>
-<h3 id="玩客云刷机openwrt两种方法："><a href="#玩客云刷机openwrt两种方法：" class="headerlink" title="玩客云刷机openwrt两种方法："></a>玩客云刷机openwrt两种方法：</h3><p><strong>「方法一」</strong>直刷openwrt 这个网上资源只有一个，snail 大神制作的固件，固件没插件，需要自己安装。</p>
-<p><strong>「方法二」</strong>刷armbian安装docker在安装openwrt，这个有比较多的适合固件，openwrt版本新，插件多，本次选这个方案。</p>
-<h3 id="刷机资源分享"><a href="#刷机资源分享" class="headerlink" title="刷机资源分享"></a>刷机资源分享</h3><p>刷机固件、软件，使用阿里云分享，不限速，需要转存后下载，然后解压！</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d71c4ba104.png" alt=""></p>
-<h4 id="玩客云openwrt刷机包："><a href="#玩客云openwrt刷机包：" class="headerlink" title="玩客云openwrt刷机包："></a>玩客云openwrt刷机包：</h4><blockquote>
-<p>❝</p>
-<p><a href="https://www.aliyundrive.com/s/ZM3oScBDcck**「提取码" target="_blank" rel="noopener">https://www.aliyundrive.com/s/ZM3oScBDcck**「提取码</a>: y75j」**</p>
-<p>❞</p>
-</blockquote>
-<h3 id="第一步：刷入底包-update"><a href="#第一步：刷入底包-update" class="headerlink" title="第一步：刷入底包 update"></a>第一步：刷入底包 update</h3><p><img src="http://img.senxi.xyz/i/2022/10/05/633d385dacd7a.png" alt=""></p>
-<p>WIN10打开烧录软件，选择update镜像，点开始。</p>
-<p>关键步骤，先短接触点，再接通玩客云主板电源。需要说明的是，玩客云有两种版本，它们的短接位置也是不一样的。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633cf77c3e418.png" alt=""></p>
-<p>我的是老主板，上图短接位置，图片来源：@Powersee大神</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633cf81ec5862.png" alt=""></p>
-<p>这个是新版（也就是玩客云主板上标注的有v1.3的主板），短接点是在正面。</p>
-<p>拆机后、usb插入玩客云<strong>「靠近HDMI的接口」</strong>、另一头接入电脑usb、短接焊点、通电。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d3af398e4d.png" alt=""></p>
-<p>正常情况，会出现上图的一个线程，开始写入。如果有错误，换一个usb接口，多试几次。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d3b8b4702d.png" alt=""></p>
-<p>这个固件很小，很快就会写完，一般几秒钟，提示烧录成功后，先点”停止“，然后关闭，拔掉电源、拔掉USB。</p>
-<h3 id="第二步：玩客云刷入armbian5-9系统"><a href="#第二步：玩客云刷入armbian5-9系统" class="headerlink" title="第二步：玩客云刷入armbian5.9系统"></a>第二步：玩客云刷入armbian5.9系统</h3><p>这一步分为好几个部分：</p>
-<ol>
-<li><p>U盘写入armbian5.88系统</p>
-</li>
-<li><p>armbian5.88写入玩客云EMMC</p>
-</li>
-<li><p>U盘写入armbian5.9系统</p>
-</li>
-<li><p>U盘启armbian5.9系统ssh登陆写入EMMC</p>
-</li>
-</ol>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d3cfdb2c9d.png" alt=""></p>
-<p>打开写入U盘镜像软件，选择镜像，确认U盘名称，点flash开始写入。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d3d65990e0.png" alt=""></p>
-<p>等待几分钟，写入速度和U盘传输速度有关，一般是几分钟，提示成功后，关闭软件，拔出U盘。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d3ece9181a.png" alt=""></p>
-<p>把U盘插入玩客云靠近网口的USB，然后通电，指示灯会蓝色→绿色→蓝紫闪烁→蓝色，证明刷机成功，过程好几分钟，多等下。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d40ded1121.png" alt=""></p>
-<p>打开写入软件，选armbian5.9的镜像，写入U盘，过程比前面快一点，这个镜像小一些，同样步骤操作。</p>
-<p>armbian5.9系统写入完成后，把U盘插入玩客云靠近网口的USB，用网线接入路由器LAN口，通电开机。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d5af6e7eea.png" alt=""></p>
-<p>过一会打开路由器后台，找到”aml-s812“的设备IP地址，复制。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d5be67081d.png" alt=""></p>
-<p>WIN10电脑打开putty软件，其他ssh工具也可以，填入上面的IP地址</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d5d5a18ac3.png" alt=""></p>
-<p>登陆，用户名：root  默认密码：1234</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d5e6b9bb66.png" alt=""></p>
-<p>进入目录 <code>cd /boot/install</code> ，写入emmc命令，等待写入完成，耗时几分钟。</p>
-<p>刷入 emmc命令：</p>
-<p>cd /boot/install  sudo ./install.sh</p>
-<p>完成后，拔电源，拔掉U盘，终于ARMBIAN系统刷机完成。</p>
-<h3 id="第三步：docker环境搭建"><a href="#第三步：docker环境搭建" class="headerlink" title="第三步：docker环境搭建"></a>第三步：docker环境搭建</h3><p>国内网络连接不稳定，需要更换软件源，然后更新系统，之后才能安装docker。</p>
-<p><strong>「换Debian源」</strong></p>
-<p><code>mv /etc/apt/sources.list /etc/apt/sources.list.bk   nano /etc/apt/sources.list</code></p>
-<p>进入编辑器后，粘贴下面代码</p>
-<p><code>deb https://mirrors.ustc.edu.cn/debian/ bullseye main non-free contrib   deb-src https://mirrors.ustc.edu.cn/debian/ bullseye main non-free contrib   deb https://mirrors.ustc.edu.cn/debian-security/ bullseye-security main   deb-src https://mirrors.ustc.edu.cn/debian-security/ bullseye-security main   deb https://mirrors.ustc.edu.cn/debian/ bullseye-updates main non-free contrib   deb-src https://mirrors.ustc.edu.cn/debian/ bullseye-updates main non-free contrib   deb https://mirrors.ustc.edu.cn/debian/ bullseye-backports main non-free contrib   deb-src https://mirrors.ustc.edu.cn/debian/ bullseye-backports main non-free contrib</code></p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d62359f905.png" alt=""></p>
-<p>然后保存，退出。</p>
-<p><strong>「更新软件」</strong></p>
-<p><code>apt-get update &amp;&amp; apt-get upgrade</code></p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d649e79d7c.png" alt=""></p>
-<p>选择有Y就选Y，有默认的情况就选N</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d652203b88.png" alt=""></p>
-<p>这里选择 NO</p>
-<p><strong>「安装docker」</strong></p>
-<p><code>apt install docker.io</code></p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d662e1aeb5.png" alt=""></p>
-<p>等待代码跑完后，docker -v 查看下版本，证明安装成功！</p>
-<h3 id="安装OpenWrt"><a href="#安装OpenWrt" class="headerlink" title="安装OpenWrt"></a>安装OpenWrt</h3><p>镜像一：<a href="https://www.right.com.cn/forum/thread-8024126-1-1.html" target="_blank" rel="noopener">https://www.right.com.cn/forum/thread-8024126-1-1.html</a></p>
-<p>镜像二：<a href="https://hub.docker.com/r/xuanaimai/onecloud" target="_blank" rel="noopener">https://hub.docker.com/r/xuanaimai/onecloud</a></p>
-<p>本次安装的是镜像一，比较精简，功能够用；镜像二功能很全，根据自己需要选择。</p>
-<p><strong>「打开网卡混杂模式」</strong></p>
-<p>ip link set eth0 promisc on</p>
-<p><strong>「创建网络」</strong></p>
-<p>docker network create -d macvlan –subnet=192.168.100.0/24 –gateway=192.168.100.1 -o parent=eth0 macnet</p>
-<p>自己根据 玩客云 所在网段修改，如：玩客云IP:192.168.1.175，则192.168.0.0/24 改成 192.168.1.0/24，192.168.0.1改成主路由地址</p>
-<p><strong>「拉取镜像」</strong></p>
-<p>docker pull jyhking/onecloud:1.1docker run -itd –name=OneCloud –restart=always –network=macnet –privileged=true jyhking/onecloud:1.1 /sbin/init</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d698e6cd3c.png" alt=""></p>
-<p>openwrt镜像运行成功，然后打开路由器后台，找到openwrt地址。</p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d6aececc72.png" alt=""></p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d6b91b4951.png" alt=""></p>
-<p><strong>「用户名：root  密码： password」</strong></p>
-<p><strong>「玩客云旁路由设置：」</strong></p>
-<ul>
-<li><p>LAN口固定IP地址，网关指向主路由IP地址</p>
-</li>
-<li><p>关闭DHCP服务器</p>
-</li>
-<li><p>关闭IPV6</p>
-</li>
-<li><p>防火墙自定义规则添加下面代码<code>iptables -t nat -I POSTROUTING eth0 -j MASQUERADE</code></p>
-</li>
-</ul>
-<h3 id="玩客云旁路由性能测试"><a href="#玩客云旁路由性能测试" class="headerlink" title="玩客云旁路由性能测试"></a>玩客云旁路由性能测试</h3><p><strong>「1、iperf3内网测速」</strong></p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d6cb467610.png" alt=""></p>
-<p>基本上在930Mbps上下，证明网口是千兆的，基本跑满了。</p>
-<p><strong>「2、油管4K视频跑分测试」</strong></p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d6d8e99755.png" alt=""></p>
-<p>稳定在5万多分，功耗1瓦多，CPU占用率在 40% 左右。</p>
-<p><strong>「3、fast网速测试」</strong></p>
-<p><img src="http://img.senxi.xyz/i/2022/10/05/633d6e1ce2667.png" alt=""></p>
-<p>测了好几次，最低65Mbps，最高84Mbps，看4K视频完全够用了。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>价格低廉，40多块钱就能入手，千兆网口，可当旁路由使用，能满足100M带宽的科学上网，功耗极低，适合喜欢折腾的朋友。</p>
+<h1 id="安装-Acme"><a href="#安装-Acme" class="headerlink" title="安装 Acme"></a>安装 Acme</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">curl https://get.acme.sh | sh</span><br></pre></td></tr></table></figure>
+<h1 id="申请证书"><a href="#申请证书" class="headerlink" title="申请证书"></a>申请证书</h1><p>需要准备一个邮箱（非必须）和域名解析到你的IP</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">~/.acme.sh/acme.sh –register-account -m 99218632@qq.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">~/.acme.sh/acme.sh –issue -d wwz1997.eu.org –standalone</span><br></pre></td></tr></table></figure>
+<h1 id="改证书存放位置"><a href="#改证书存放位置" class="headerlink" title="改证书存放位置"></a>改证书存放位置</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">~/.acme.sh/acme.sh –installcert -d wwz1997.eu.org  –key-file /root/private.key –fullchain-file /root/cert.crt</span><br></pre></td></tr></table></figure>
+<h1 id="TLS具体配置"><a href="#TLS具体配置" class="headerlink" title="TLS具体配置"></a>TLS具体配置</h1><h1 id="1-怎么开启TLS"><a href="#1-怎么开启TLS" class="headerlink" title="1. 怎么开启TLS"></a>1. 怎么开启TLS</h1><p>在后台选择搭建节点的时候是vmess/trojan/ss/vless等都可以开启tls选项。开启TLS选项后需要绑定域名，这里我们填写刚刚申请了ssl的域名，证书位置是 /root/cert.crt 密钥位置是 /root/private.key</p>
+<p>端口选择443，注意因为x-ui没有域名回落，所以我们搭建在443上的翻墙只能有一个。</p>
 
                 <hr>
                 
@@ -340,14 +230,14 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/blog/2022/12/19/2022/ZZ/" data-toggle="tooltip" data-placement="top"
-                           title="IPtables">&larr; Previous Post</a>
+                        <a href="/blog/2023/04/21/2023/live/" data-toggle="tooltip" data-placement="top"
+                           title="Live">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/blog/2022/07/23/2022/10video/" data-toggle="tooltip" data-placement="top"
-                           title="追剧网站">Next Post &rarr;</a>
+                        <a href="/blog/2023/04/03/2023/ChatGPT/" data-toggle="tooltip" data-placement="top"
+                           title="ChatGPT">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -385,7 +275,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#玩客云刷机armbian变身openwrt旁路由教程＆性能测试"><span class="toc-text">玩客云刷机armbian变身openwrt旁路由教程＆性能测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#玩客云刷机openwrt两种方法："><span class="toc-text">玩客云刷机openwrt两种方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#刷机资源分享"><span class="toc-text">刷机资源分享</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#玩客云openwrt刷机包："><span class="toc-text">玩客云openwrt刷机包：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步：刷入底包-update"><span class="toc-text">第一步：刷入底包 update</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二步：玩客云刷入armbian5-9系统"><span class="toc-text">第二步：玩客云刷入armbian5.9系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三步：docker环境搭建"><span class="toc-text">第三步：docker环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装OpenWrt"><span class="toc-text">安装OpenWrt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#玩客云旁路由性能测试"><span class="toc-text">玩客云旁路由性能测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#X-UI一键脚本"><span class="toc-text">X-UI一键脚本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#TLS安装前准备步骤"><span class="toc-text">TLS安装前准备步骤</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#socat"><span class="toc-text">socat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Debian-Ubuntu安装socat"><span class="toc-text">1. Debian/Ubuntu安装socat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-centos安装socat"><span class="toc-text">2. centos安装socat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装-Acme"><span class="toc-text">安装 Acme</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#申请证书"><span class="toc-text">申请证书</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#改证书存放位置"><span class="toc-text">改证书存放位置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#TLS具体配置"><span class="toc-text">TLS具体配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-怎么开启TLS"><span class="toc-text">1. 怎么开启TLS</span></a></li></ol>
                 </div>
             </div>
         </div>

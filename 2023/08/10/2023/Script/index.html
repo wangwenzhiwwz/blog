@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="王文志的个人博客">
+    <meta name="keyword" content="">
+    <meta name="theme-color" content="#fff">
+    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <meta name="p:domain_verify" content="0850f57b90f84bf685f130c8d6e43877"/>
+    <meta name="p:domain_verify" content="7ae152f1d1834341bbebc2129928795d"/>
+    <meta name="360-site-verification" content="7fcf4d343b51b2d08e2fcc4a9d522f68" />
+    <meta name="sogou_site_verification" content="W6TKXkflr2"/>
+    <meta name="msvalidate.01" content="83AB792CC43FE1C37F258F83D75E9344" />
+    <meta name="p:domain_verify" content="73bf0e730c9941c84de350f3e4711752"/>
+    <link rel="shortcut icon" href="https://i.imgur.com/pqOWzeR.png">
+    <linkrel="Bookmark" href="https://i.imgur.com/pqOWzeR.png"> 
+    <link rel="alternate" type="application/atom+xml" title="WANGWENZHI" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    
+    <title>
+        
+        Script｜WANGWENZHI
+        
+    </title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLMX6BNWCC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SLMX6BNWCC');
+    </script>
+    
+
+    <link rel="canonical" href="https://wangwenzhi.eu.org/blog/blog/2023/08/10/2023/Script/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/blog/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/blog/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('https://i.imgur.com/iaziSI1.jpg')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/blog/">
+            	—
+                <span class="brand-logo">
+                    WANGWENZHI
+                </span>
+                —
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/blog/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/blog/tags">tags</a>
+                    </li>
+
+                    <li>
+                        <a href="https://wangwenzhi.eu.org/">Blog</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/blog/works">works</a>
+                    </li>
+                   
+					<li>
+						<a href="/blog/about">About</a>
+					</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img" src="https://wangwenzhi.eu.org/images/images/Script.png">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('https://wangwenzhi.eu.org/images/images/Script.png');
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>Script</h1>
+                    
+                    <h2 class="subheading">常用的脚本</h2>
+                    
+                    <span class="meta">
+                         作者 王文志
+                        <span>
+                          日期 2023-08-10
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/blog/tags/#科学上网"
+                           title="科学上网">科学上网</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            Script
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <p><img src="https://wangwenzhi.eu.org/images/images/Script.png" alt=""></p>
+<h2 id="更新列表"><a href="#更新列表" class="headerlink" title="更新列表"></a><strong>更新列表</strong></h2><p>2023-0525 检测是否可以访问 ChatGPT 脚本 <a href="https://github.com/moeakwak/chatgpt-web-share/wiki/%E4%B8%AD%E6%96%87%E6%8C%87%E5%8D%97" target="_blank" rel="noopener">来源</a></p>
+<p><strong>PLAINTEXT</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -Ls https://raw.githubusercontent.com/missuo/OpenAI-Checker/main/openai.sh)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>2023-4-29 修改检测是否可以访问 ChatGPT 脚本</p>
+<p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -Ls https://ourl.co/oaic)</span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -Ls https://cdn.jsdelivr.net/gh/missuo/OpenAI-Checker/openai.sh)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="综合工具箱（强烈推荐，集成了很多脚本）"><a href="#综合工具箱（强烈推荐，集成了很多脚本）" class="headerlink" title="综合工具箱（强烈推荐，集成了很多脚本）"></a><strong>综合工具箱（强烈推荐，集成了很多脚本）</strong></h2><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget -O box.sh https://raw.githubusercontent.com/BlueSkyXN/SKY-BOX/main/box.sh &amp;&amp; chmod +x box.sh &amp;&amp; clear &amp;&amp; ./box.sh</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="杜甫测试"><a href="#杜甫测试" class="headerlink" title="杜甫测试"></a><strong>杜甫测试</strong></h2><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget -q https://github.com/Aniverse/A/raw/i/a &amp;&amp; bash a</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="DD-相关"><a href="#DD-相关" class="headerlink" title="DD 相关"></a><strong>DD 相关</strong></h2><h3 id="1、甲骨文-DD-脚本"><a href="#1、甲骨文-DD-脚本" class="headerlink" title="1、甲骨文 DD 脚本"></a><strong>1、甲骨文 DD 脚本</strong></h3><p>DD 成 Debian 10</p>
+<p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bash &lt;(wget --no-check-certificate -qO- &apos;https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh&apos;) -d 10 -v 64 -p &quot;自定义root密码&quot; -port &quot;自定义ssh端口&quot;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>DD 成 Ubuntu 20.04</p>
+<p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bash &lt;(wget --no-check-certificate -qO- &apos;https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh&apos;) -u 20.04 -v 64 -p &quot;自定义root密码&quot; -port &quot;自定义ssh端口&quot;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="2、MoeClub-脚本"><a href="#2、MoeClub-脚本" class="headerlink" title="2、MoeClub 脚本"></a><strong>2、MoeClub 脚本</strong></h3><p><strong>重点推荐</strong>：</p>
+<p>时间：22/11/2021 15:21 萌咖更新脚本：</p>
+<ol>
+<li><p>新增对 Oracle AMD，Oracle ARM 全面支持。可支持从 Ubuntu, Oracle Linux 等系统网络重装.</p>
+</li>
+<li><p>更新 dd 镜像的基础系统版本.</p>
+</li>
+<li><p>移除对外部 wget 的依赖.</p>
+</li>
+<li><p>新增 -port 参数，可更改默认 SSH 端口.</p>
+</li>
+<li><p>更新 内置的网络参数计算 逻辑.</p>
+</li>
+<li><p>更新 grub 配置文件定位逻辑，可支持任意引导 grub 的系统.</p>
+</li>
+</ol>
+<p>以下系统已通过测试 (其他自测):</p>
+<p>Debian: 9, 10, 11;</p>
+<p>Ubuntu: 18.04, 20.04;</p>
+<p>CentOS: 6.10;</p>
+<p>以下平台已通过测试 (其他自测):</p>
+<p>Oracle、Do、Azure</p>
+<p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bash &lt;(wget --no-check-certificate -qO- &apos;https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh&apos;) -d 10 -v 64 -p &quot;自定义root密码&quot; -port &quot;自定义ssh端口&quot;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>d 10 -v 64</li>
+<li>d 9 -v 64</li>
+<li>u 20.04 -v 64</li>
+<li>u 18.04 -v 64</li>
+</ul>
+<p>开机改密码脚本：</p>
+<p>开机改密：</p>
+<p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">echo root:Vicer |sudo chpasswd root</span><br><span class="line">sudo sed -i &apos;s/^#\?PermitRootLogin.*/PermitRootLogin yes/g&apos; /etc/ssh/sshd_config;</span><br><span class="line">sudo sed -i &apos;s/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g&apos; /etc/ssh/sshd_config;</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="3、另一位大佬的脚本"><a href="#3、另一位大佬的脚本" class="headerlink" title="3、另一位大佬的脚本"></a><strong>3、另一位大佬的脚本</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget --no-check-certificate -O AutoReinstall.sh https://git.io/AutoReinstall.sh &amp;&amp; bash AutoReinstall.sh</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>CentOS 默认密码 Pwd@CentOS 其它系统 Pwd@Linux</li>
+<li>OpenVZ / LXC 架构系统不适用</li>
+</ul>
+<p>来源：<a href="https://blog.hicasper.com/post/135.html" target="_blank" rel="noopener">https://blog.hicasper.com/post/135.html</a> 参考：<a href="https://www.ydyno.com/archives/1245.html" target="_blank" rel="noopener">https://www.ydyno.com/archives/1245.html</a> 感谢大佬的付出！</p>
+<p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bash &lt;(wget --no-check-certificate -qO- &apos;https://file.geekn.net/CNODnjau/InstallNET.sh&apos;) -d 11 -v 64 -a -firmware</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>firmware 额外的驱动支持</li>
+<li>d 后面是系统版本号</li>
+<li>v 后面写 64 位 32 位</li>
+<li>a （不清楚这个干啥的但是每个脚本都带）</li>
+</ul>
+<p>–mirror 后面是镜像源地址</p>
+<ul>
+<li>p 后面写自定义密码</li>
+</ul>
+<p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">镜像站地址</span><br><span class="line">官方给出的地址列表：https://www.debian.org/mirror/list</span><br><span class="line"></span><br><span class="line">一些国内的</span><br><span class="line">ftp.cn.debian.org</span><br><span class="line">mirror.bjtu.edu.cn</span><br><span class="line">mirror.lzu.edu.cn</span><br><span class="line">mirror.nju.edu.cn</span><br><span class="line">mirrors.163.com</span><br><span class="line">mirrors.bfsu.edu.cn</span><br><span class="line">mirrors.hit.edu.cn</span><br><span class="line">mirrors.huaweicloud.com</span><br><span class="line">mirror.sjtu.edu.cn</span><br><span class="line">mirrors.tuna.tsinghua.edu.cn</span><br><span class="line">mirrors.ustc.edu.cn</span><br><span class="line"></span><br><span class="line">使用方法：（大致都是一样的）</span><br><span class="line"></span><br><span class="line">清华源</span><br><span class="line">--mirror &apos;https://mirrors.ustc.edu.cn/debian/&apos;</span><br><span class="line"></span><br><span class="line">腾讯源</span><br><span class="line">--mirror &apos;https://mirrors.aliyun.com/debian/&apos;</span><br><span class="line"></span><br><span class="line">阿里源</span><br><span class="line">--mirror &apos;https://mirrors.aliyun.com/debian/&apos;</span><br><span class="line"></span><br><span class="line">华为源</span><br><span class="line">--mirror &apos;https://mirrors.huaweicloud.com/debian/&apos;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="4、秋水逸冰-Windows-2012-2016-2019-2022-10-11-DD-镜像"><a href="#4、秋水逸冰-Windows-2012-2016-2019-2022-10-11-DD-镜像" class="headerlink" title="4、秋水逸冰 Windows 2012/2016/2019/2022 10/11 DD 镜像"></a><strong>4、秋水逸冰 Windows 2012/2016/2019/2022 10/11 DD 镜像</strong></h3><p>适用于 UEFI 启动的多个 Windows 系统 DD 镜像：</p>
+<p><a href="https://teddysun.com/656.html" target="_blank" rel="noopener">https://teddysun.com/656.html</a></p>
+<p>分别是：</p>
+<ol>
+<li>Windows Server 2012 R2 Datacenter</li>
+<li>Windows Server 2016 Datacenter (build: 14393.5006)</li>
+<li>Windows Server 2019 Datacenter (build: 17763.2686)</li>
+<li>Windows Server 2022 Datacenter (build: 20348.587)</li>
+<li>Windows 10 Enterprise LTSC (build: 19044.1288)</li>
+<li>Windows 11 Pro for Workstations 21H2 (build: 22000.194)</li>
+</ol>
+<p>适用于 BIOS 启动的 Windows Server 2022 Datacenter DD 镜像：</p>
+<p><a href="https://teddysun.com/629.html" target="_blank" rel="noopener">https://teddysun.com/629.html</a></p>
+<p>适用于 BIOS 启动的 Windows 11 Pro for Workstations 21H2 DD 镜像：</p>
+<p><a href="https://teddysun.com/642.html" target="_blank" rel="noopener">https://teddysun.com/642.html</a></p>
+<p>适用于 BIOS 启动的 Windows 10 Enterprise LTSC DD 镜像：</p>
+<p><a href="https://teddysun.com/640.html" target="_blank" rel="noopener">https://teddysun.com/640.html</a></p>
+<p>适用于 BIOS 启动的 Windows Server 2019/2016/2012R2 Datacenter DD 镜像：</p>
+<p><a href="https://teddysun.com/545.html" target="_blank" rel="noopener">https://teddysun.com/545.html</a></p>
+<p>分别是：</p>
+<ol>
+<li>Windows Server 2019 Datacenter（Build: 17763.2686）</li>
+<li>Windows Server 2016 Datacenter（Build: 14393.5006）</li>
+<li>Windows Server 2012 R2 Datacenter</li>
+</ol>
+<h2 id="测试相关"><a href="#测试相关" class="headerlink" title="测试相关"></a><strong>测试相关</strong></h2><h3 id="机器测试"><a href="#机器测试" class="headerlink" title="机器测试"></a><strong>机器测试</strong></h3><h3 id="单线程测试"><a href="#单线程测试" class="headerlink" title="单线程测试"></a><strong>单线程测试</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -Lso- https://bench.im/hyperspeed)</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="最全测速脚本"><a href="#最全测速脚本" class="headerlink" title="最全测速脚本"></a><strong>最全测速脚本</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">curl -fsL https://ilemonra.in/LemonBenchIntl | bash -s fast</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="superbench"><a href="#superbench" class="headerlink" title="superbench"></a><strong>superbench</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget -qO- git.io/superbench.sh | bash</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Bench-sh"><a href="#Bench-sh" class="headerlink" title="Bench.sh"></a><strong>Bench.sh</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget -qO- bench.sh | bash</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="速度测试"><a href="#速度测试" class="headerlink" title="速度测试"></a><strong>速度测试</strong></h3><h3 id="显示延迟、抖动"><a href="#显示延迟、抖动" class="headerlink" title="显示延迟、抖动"></a><strong>显示延迟、抖动</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bash &lt;(wget -qO- https://bench.im/hyperspeed)</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="直接显示回程线路"><a href="#直接显示回程线路" class="headerlink" title="直接显示回程线路"></a><strong>直接显示回程线路</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">curl https://raw.githubusercontent.com/zhucaidan/mtr_trace/main/mtr_trace.sh|bash</span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget -q route.f2k.pub -O route &amp;&amp; bash route</span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>PLAINTEXT</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 第一个</span><br><span class="line">wget https://raw.githubusercontent.com/nanqinlang-script/testrace/master/testrace.sh</span><br><span class="line">bash testrace.sh</span><br><span class="line"></span><br><span class="line"># 第二个</span><br><span class="line">wget -qO- git.io/besttrace | bash</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="四网测速"><a href="#四网测速" class="headerlink" title="四网测速"></a><strong>四网测速</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget -O jcnf.sh https://raw.githubusercontent.com/Netflixxp/jcnfbesttrace/main/jcnf.sh</span><br><span class="line"></span><br><span class="line">bash jcnf.sh</span><br></pre></td></tr></table></figure>
+<hr>
+<p>### </p>
+<h3 id="三网测速"><a href="#三网测速" class="headerlink" title="三网测速"></a><strong>三网测速</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -Lso- https://git.io/superspeed_uxh)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>带快速四网测试版本：</p>
+<p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -Lso- https://dl.233.mba/d/sh/speedtest.sh)</span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -Lso- https://git.io/J1SEh)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>带综合测试的版本（CPU 信息、Geekbench 等）：</p>
+<p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bash &lt;(wget --no-check-certificate -O- https://dl.233.mba/d/sh/superbenchpro.sh)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>来源：<a href="https://www.wrnxr.cn/163.html" target="_blank" rel="noopener">https://www.wrnxr.cn/163.html</a></p>
+<h3 id="测试-25-端口是否开放"><a href="#测试-25-端口是否开放" class="headerlink" title="测试 25 端口是否开放"></a><strong>测试 25 端口是否开放</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">telnet smtp.aol.com 25</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="测试-IPv4-优先还是-IPv6-优先"><a href="#测试-IPv4-优先还是-IPv6-优先" class="headerlink" title="测试 IPv4 优先还是 IPv6 优先"></a><strong>测试 IPv4 优先还是 IPv6 优先</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">curl ip.p3terx.com</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="流媒体测试"><a href="#流媒体测试" class="headerlink" title="流媒体测试"></a><strong>流媒体测试</strong></h3><h3 id="全媒体测试"><a href="#全媒体测试" class="headerlink" title="全媒体测试"></a><strong>全媒体测试</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="奈飞测试"><a href="#奈飞测试" class="headerlink" title="奈飞测试"></a><strong>奈飞测试</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget -O nf https://github.com/sjlleo/netflix-verify/releases/download/2.5/nf_2.5_linux_amd64 &amp;&amp; chmod +x nf &amp;&amp; clear &amp;&amp; ./nf</span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>PLAINTEXT</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#第一个</span><br><span class="line">bash &lt;(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)</span><br><span class="line"></span><br><span class="line"># 第二个</span><br><span class="line">bash &lt;(curl -sSL &quot;https://github.com/CoiaPrant/MediaUnlock_Test/raw/main/check.sh&quot;)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="WARP"><a href="#WARP" class="headerlink" title="WARP"></a><strong>WARP</strong></h2><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget -N --no-check-certificate https://cdn.jsdelivr.net/gh/YG-tsj/CFWarp-Pro/multi.sh &amp;&amp; chmod +x multi.sh &amp;&amp; ./multi.sh</span><br></pre></td></tr></table></figure>
+<hr>
+<p>之后进入脚本快捷方式为 <code>bash multi.sh</code></p>
+<h2 id="服务器时间"><a href="#服务器时间" class="headerlink" title="服务器时间"></a><strong>服务器时间</strong></h2><h3 id="CentOS-同步时间"><a href="#CentOS-同步时间" class="headerlink" title="CentOS 同步时间"></a><strong>CentOS 同步时间</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum -y install ntpdate</span><br><span class="line">timedatectl set-timezone Asia/Shanghai</span><br><span class="line">ntpdate ntp1.aliyun.com</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="BBR"><a href="#BBR" class="headerlink" title="BBR"></a><strong>BBR</strong></h2><h3 id="CentOS-7-BBR"><a href="#CentOS-7-BBR" class="headerlink" title="CentOS 7 BBR"></a><strong>CentOS 7 BBR</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="一键开启-BBR"><a href="#一键开启-BBR" class="headerlink" title="一键开启 BBR"></a><strong>一键开启 BBR</strong></h3><p>注意：需要 Linux Kernel 内核升级到 4.9 及以上版本可以实现 BBR 加速</p>
+<p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">uname -srm</span><br></pre></td></tr></table></figure>
+<hr>
+<p>输出结果：</p>
+<p><strong>PLAINTEXT</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Linux 3.10.0-957.12.2.el7.x86_64 x86_64</span><br><span class="line">3 - 内核版本.</span><br><span class="line">10 - 主修订版本.</span><br><span class="line">0-957 - 次要修订版本.</span><br><span class="line">12 - 补丁版本.</span><br></pre></td></tr></table></figure>
+<hr>
+<p>一般来说，Ubuntu18.04 以上就可以 (默认的内核 <code>4.15</code>)</p>
+<p><strong>PLAINTEXT</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo &quot;net.core.default_qdisc=fq&quot; &gt;&gt; /etc/sysctl.conf</span><br><span class="line">echo &quot;net.ipv4.tcp_congestion_control=bbr&quot; &gt;&gt; /etc/sysctl.conf</span><br><span class="line"></span><br><span class="line">sysctl -p</span><br><span class="line"></span><br><span class="line">sysctl net.ipv4.tcp_available_congestion_control</span><br><span class="line"></span><br><span class="line">lsmod | grep bbr</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Docker-相关"><a href="#Docker-相关" class="headerlink" title="Docker 相关"></a><strong>Docker 相关</strong></h2><h3 id="更新、安装必备软件"><a href="#更新、安装必备软件" class="headerlink" title="更新、安装必备软件"></a><strong>更新、安装必备软件</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt-get update &amp;&amp; apt-get install -y wget vim</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="海外服务器"><a href="#海外服务器" class="headerlink" title="海外服务器"></a><strong>海外服务器</strong></h3><h3 id="非大陆-Docker-安装"><a href="#非大陆-Docker-安装" class="headerlink" title="非大陆 Docker 安装"></a><strong>非大陆 Docker 安装</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget -qO- get.docker.com | bash</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="卸载-Docker"><a href="#卸载-Docker" class="headerlink" title="卸载 Docker"></a><strong>卸载 Docker</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get purge docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo rm -rf /var/lib/docker</span><br><span class="line">sudo rm -rf /var/lib/containerd</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="非大陆-Docker-compose-安装"><a href="#非大陆-Docker-compose-安装" class="headerlink" title="非大陆 Docker-compose 安装"></a><strong>非大陆 Docker-compose 安装</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo curl -L &quot;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
+<hr>
+<p>查看版本</p>
+<p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker-compose --version</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="大陆服务器"><a href="#大陆服务器" class="headerlink" title="大陆服务器"></a><strong>大陆服务器</strong></h3><h3 id="国内机安装-docker"><a href="#国内机安装-docker" class="headerlink" title="国内机安装 docker"></a><strong>国内机安装 docker</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">curl -sSL https://get.daocloud.io/docker | sh</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="国内机安装-docker-compose"><a href="#国内机安装-docker-compose" class="headerlink" title="国内机安装 docker-compose"></a><strong>国内机安装 docker-compose</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">curl -L https://get.daocloud.io/docker/compose/releases/download/v2.1.1/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose</span><br><span class="line">chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="卸载-docker"><a href="#卸载-docker" class="headerlink" title="卸载 docker"></a><strong>卸载 docker</strong></h3><p><strong>PLAINTEXT</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get remove docker docker-engine</span><br><span class="line">rm -fr /var/lib/docker/</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a><strong>防火墙</strong></h2><h3 id="CentOS-关闭防火墙"><a href="#CentOS-关闭防火墙" class="headerlink" title="CentOS 关闭防火墙"></a><strong>CentOS 关闭防火墙</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl start supervisord</span><br><span class="line">systemctl disable firewalld</span><br><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="宝塔相关"><a href="#宝塔相关" class="headerlink" title="宝塔相关"></a><strong>宝塔相关</strong></h2><h3 id="宝塔去除登陆-已经失效，解决方法见：https-blog-laoda-de-archives-bt-to-aapanel"><a href="#宝塔去除登陆-已经失效，解决方法见：https-blog-laoda-de-archives-bt-to-aapanel" class="headerlink" title="宝塔去除登陆 (已经失效，解决方法见：https://blog.laoda.de/archives/bt-to-aapanel)"></a><strong>宝塔去除登陆 (已经失效，解决方法见：<a href="https://blog.laoda.de/archives/bt-to-aapanel" target="_blank" rel="noopener">https://blog.laoda.de/archives/bt-to-aapanel</a>)</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sed -i &quot;s|if (bind_user == &apos;True&apos;) &#123;|if (bind_user == &apos;REMOVED&apos;) &#123;|g&quot; /www/server/panel/BTPanel/static/js/index.js</span><br><span class="line">rm -rf /www/server/panel/data/bind.pl</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="宝塔-amp-aapanel-破解（这个目前也不保证可用了）"><a href="#宝塔-amp-aapanel-破解（这个目前也不保证可用了）" class="headerlink" title="宝塔 &amp; aapanel 破解（这个目前也不保证可用了）"></a><strong>宝塔 &amp; aapanel 破解（这个目前也不保证可用了）</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 宝塔&amp;aapanel破解</span><br><span class="line">编辑 /www/server/panel/class/panelplugin.py</span><br><span class="line">找到 softList[&apos;list&apos;] = tmpList 这行代码</span><br><span class="line">在下面添加以下代码，注意缩进</span><br><span class="line"></span><br><span class="line">softList[&apos;pro&apos;] = 1</span><br><span class="line">for soft in softList[&apos;list&apos;]:</span><br><span class="line">soft[&apos;endtime&apos;] = 0</span><br><span class="line"></span><br><span class="line">编辑完毕后保存重启面板即可</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="呆梨相关"><a href="#呆梨相关" class="headerlink" title="呆梨相关"></a><strong>呆梨相关</strong></h2><h3 id="XUI"><a href="#XUI" class="headerlink" title="XUI"></a><strong>XUI</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>脚本来源：<a href="https://github.com/FranzKafkaYu/x-ui" target="_blank" rel="noopener">https://github.com/FranzKafkaYu/x-ui</a></p>
+<h3 id="mack-a"><a href="#mack-a" class="headerlink" title="mack-a"></a><strong>mack-a</strong></h3><p><strong>BASH</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget -P /root -N --no-check-certificate &quot;https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh&quot; &amp;&amp; chmod 700 /root/install.sh &amp;&amp; /root/install.sh</span><br></pre></td></tr></table></figure>
+<hr>
+<p>持续更新中</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/blog/2023/08/01/2023/alist/" data-toggle="tooltip" data-placement="top"
+                           title="AList">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC8zMjExMi84Njc2">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#更新列表"><span class="toc-text">更新列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#综合工具箱（强烈推荐，集成了很多脚本）"><span class="toc-text">综合工具箱（强烈推荐，集成了很多脚本）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#杜甫测试"><span class="toc-text">杜甫测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DD-相关"><span class="toc-text">DD 相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、甲骨文-DD-脚本"><span class="toc-text">1、甲骨文 DD 脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、MoeClub-脚本"><span class="toc-text">2、MoeClub 脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、另一位大佬的脚本"><span class="toc-text">3、另一位大佬的脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、秋水逸冰-Windows-2012-2016-2019-2022-10-11-DD-镜像"><span class="toc-text">4、秋水逸冰 Windows 2012/2016/2019/2022 10/11 DD 镜像</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试相关"><span class="toc-text">测试相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#机器测试"><span class="toc-text">机器测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单线程测试"><span class="toc-text">单线程测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最全测速脚本"><span class="toc-text">最全测速脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#superbench"><span class="toc-text">superbench</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bench-sh"><span class="toc-text">Bench.sh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#速度测试"><span class="toc-text">速度测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#显示延迟、抖动"><span class="toc-text">显示延迟、抖动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#直接显示回程线路"><span class="toc-text">直接显示回程线路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四网测速"><span class="toc-text">四网测速</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三网测速"><span class="toc-text">三网测速</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试-25-端口是否开放"><span class="toc-text">测试 25 端口是否开放</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试-IPv4-优先还是-IPv6-优先"><span class="toc-text">测试 IPv4 优先还是 IPv6 优先</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#流媒体测试"><span class="toc-text">流媒体测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#全媒体测试"><span class="toc-text">全媒体测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#奈飞测试"><span class="toc-text">奈飞测试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WARP"><span class="toc-text">WARP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#服务器时间"><span class="toc-text">服务器时间</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CentOS-同步时间"><span class="toc-text">CentOS 同步时间</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BBR"><span class="toc-text">BBR</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CentOS-7-BBR"><span class="toc-text">CentOS 7 BBR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一键开启-BBR"><span class="toc-text">一键开启 BBR</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker-相关"><span class="toc-text">Docker 相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#更新、安装必备软件"><span class="toc-text">更新、安装必备软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#海外服务器"><span class="toc-text">海外服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#非大陆-Docker-安装"><span class="toc-text">非大陆 Docker 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#卸载-Docker"><span class="toc-text">卸载 Docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#非大陆-Docker-compose-安装"><span class="toc-text">非大陆 Docker-compose 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#大陆服务器"><span class="toc-text">大陆服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#国内机安装-docker"><span class="toc-text">国内机安装 docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#国内机安装-docker-compose"><span class="toc-text">国内机安装 docker-compose</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#卸载-docker"><span class="toc-text">卸载 docker</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#防火墙"><span class="toc-text">防火墙</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CentOS-关闭防火墙"><span class="toc-text">CentOS 关闭防火墙</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#宝塔相关"><span class="toc-text">宝塔相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#宝塔去除登陆-已经失效，解决方法见：https-blog-laoda-de-archives-bt-to-aapanel"><span class="toc-text">宝塔去除登陆 (已经失效，解决方法见：https://blog.laoda.de/archives/bt-to-aapanel)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#宝塔-amp-aapanel-破解（这个目前也不保证可用了）"><span class="toc-text">宝塔 & aapanel 破解（这个目前也不保证可用了）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#呆梨相关"><span class="toc-text">呆梨相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#XUI"><span class="toc-text">XUI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mack-a"><span class="toc-text">mack-a</span></a></li></ol></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/blog/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/blog/tags/#科学上网"
+                           title="科学上网">科学上网</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <div style="margin-top: 20px;">
+                    <h5 class="text-center">FRIENDS</h5>
+                    <ul class="list-inline text-center">
+                        
+                        <li><a href="https://ai.com/">ChatGPT</a></li>
+                        
+                        <li><a href="https://ulefone.com/">Ulefone</a></li>
+                        
+                        <li><a href="https://ping.chinaz.com/">Ping</a></li>
+                        
+                        <li><a href="https://github.com/wangwenzhiwwz/">Github</a></li>
+                        
+                        <li><a href="https://www.zcool.com.cn/u/15698819">站酷</a></li>
+                        
+                        <li><a href="https://www.xinpianchang.com/u12508640">新片场</a></li>
+                        
+                        <li><a href="https://www.nivod.tv/">泥视频</a></li>
+                        
+                        <li><a href="https://jpsmile.com/">Jpsmile&#39;s</a></li>
+                        
+                        <li><a href="https://www.v2ex.com/member/wangwenzhi">v2ex</a></li>
+                        
+                        <li><a href="https://cli.im/">二维码生成</a></li>
+                        
+                        <li><a href="https://wangwenzhi.eu.org/base64/">Base64</a></li>
+                        
+                        <li><a href="https://app.netlify.com/login/email">Netlify</a></li>
+                        
+                        <li><a href="https://wangwenzhi.eu.org/blog/">WANGWENZHI&#39;s blog</a></li>
+                        
+                        <li><a href="https://wangwenzhi.eu.org/file/">File</a></li>
+                        
+                        <li><a href="http://www.ip111.cn/">IP</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/wangwenzhiwwz">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.youtube.com/@wangwenzhi">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-youtube fa-stack-1x fa-inverse">
+                                
+                                </i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://space.bilibili.com/236167915">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-bilibili fa-stack-1x fa-inverse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="White" viewBox="0 -60 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M488.6 104.1C505.3 122.2 513 143.8 511.9 169.8V372.2C511.5 398.6 502.7 420.3 485.4 437.3C468.2 454.3 446.3 463.2 419.9 464H92.02C65.57 463.2 43.81 454.2 26.74 436.8C9.682 419.4 .7667 396.5 0 368.2V169.8C.7667 143.8 9.682 122.2 26.74 104.1C43.81 87.75 65.57 78.77 92.02 78H121.4L96.05 52.19C90.3 46.46 87.42 39.19 87.42 30.4C87.42 21.6 90.3 14.34 96.05 8.603C101.8 2.868 109.1 0 117.9 0C126.7 0 134 2.868 139.8 8.603L213.1 78H301.1L375.6 8.603C381.7 2.868 389.2 0 398 0C406.8 0 414.1 2.868 419.9 8.603C425.6 14.34 428.5 21.6 428.5 30.4C428.5 39.19 425.6 46.46 419.9 52.19L394.6 78L423.9 78C450.3 78.77 471.9 87.75 488.6 104.1H488.6zM449.8 173.8C449.4 164.2 446.1 156.4 439.1 150.3C433.9 144.2 425.1 140.9 416.4 140.5H96.05C86.46 140.9 78.6 144.2 72.47 150.3C66.33 156.4 63.07 164.2 62.69 173.8V368.2C62.69 377.4 65.95 385.2 72.47 391.7C78.99 398.2 86.85 401.5 96.05 401.5H416.4C425.6 401.5 433.4 398.2 439.7 391.7C446 385.2 449.4 377.4 449.8 368.2L449.8 173.8zM185.5 216.5C191.8 222.8 195.2 230.6 195.6 239.7V273C195.2 282.2 191.9 289.9 185.8 296.2C179.6 302.5 171.8 305.7 162.2 305.7C152.6 305.7 144.7 302.5 138.6 296.2C132.5 289.9 129.2 282.2 128.8 273V239.7C129.2 230.6 132.6 222.8 138.9 216.5C145.2 210.2 152.1 206.9 162.2 206.5C171.4 206.9 179.2 210.2 185.5 216.5H185.5zM377 216.5C383.3 222.8 386.7 230.6 387.1 239.7V273C386.7 282.2 383.4 289.9 377.3 296.2C371.2 302.5 363.3 305.7 353.7 305.7C344.1 305.7 336.3 302.5 330.1 296.2C323.1 289.9 320.7 282.2 320.4 273V239.7C320.7 230.6 324.1 222.8 330.4 216.5C336.7 210.2 344.5 206.9 353.7 206.5C362.9 206.9 370.7 210.2 377 216.5H377z"/></svg>
+                                </i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/wangwenzhi1997">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/wangwenzhiwwz">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/wangwenzhiwwz">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/wangwenzhiwwz">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://www.linkedin.com/in/wangwenzhi">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; WANGWENZHI 2023
+                    <br>
+                     
+
+                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+        
+                    <br>
+                    Theme by <a href="https://wangwenzhiwwz.github.io/">WANGWENZHI</a>
+                </p>
+                
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/blog/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/blog/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/blog/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://wangwenzhi.eu.org/blog/blog/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-110405735-1';
+    var _gaDomain = 'auto';
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- 360 -->
+
+<script>(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?e8e9290bae1c7fe0260e9c9c3c21dcd5":"https://jspassport.ssl.qhimg.com/11.0.1.js?e8e9290bae1c7fe0260e9c9c3c21dcd5";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="http://q1.qlogo.cn/g?b=qq&amp;nk=99218632&amp;s=640">
+</body>
+
+</html>
